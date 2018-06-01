@@ -10,6 +10,6 @@
    "converted_from_user_script": true,
    "description": "Скрипт для SonarQube для улучшения отображения информации",
    "name": "SonarQubeBeauty",
-   "version": "1.0",
+   "version": "1.1",
    "manifest_version": 2
 }
