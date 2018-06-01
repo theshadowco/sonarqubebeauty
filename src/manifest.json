@@ -1,0 +1,15 @@
+{
+   "content_scripts": [ {
+      "exclude_globs": [  ],
+      "exclude_matches": [  ],
+      "include_globs": [],
+      "js": [ "sonarqubeb.user.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "converted_from_user_script": true,
+   "description": "Скрипт для SonarQube для улучшения отображения информации",
+   "name": "SonarQubeBeauty",
+   "version": "1.0",
+   "manifest_version": 2
+}
