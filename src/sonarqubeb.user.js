@@ -3,7 +3,7 @@
 // @description Скрипт для SonarQube для улучшения отображения информации
 // @author Maximov Valery aka theshadowco
 // @license MIT
-// @version 1.1
+// @version 1.2
 // @include https://www.sonarqube.org/*
 // @include http://sonar.silverbulleters.org/*
 // ==/UserScript==
@@ -33,8 +33,12 @@
 		'DataProcessors.': 'Обработки.',
 		'CommonModules.': 'ОбщиеМодули.',
 		'CommonForms.': 'ОбщиеФормы.',
-		'Catalogs.': 'Справочники.'
-		
+		'Catalogs.': 'Справочники.',
+		'ExchangePlans.': 'ПланыОбмена.',
+		'Ext.ManagedApplicationModule': 'МодульУправляемогоПриложения',
+		'Ext.OrdinaryApplicationModule': 'МодульОбычногоПриложения',
+		'InformationRegisters.': 'РегистрыСведений.',
+		'.Commands.': '.'
 	}
 
 	setInterval(function () {
@@ -44,14 +48,12 @@
 				
 				// для соблюдения последовательности
 				var newText = elems[i].title.replace('src/configuration/', '')
-					.replace('/Ext/Form/Module', '.МодульФормы')
+					.replace('src/Configuration/', '')
+					.replace('/Ext/Form/', '.')
 					.replace('/Forms/', '.')
-					.replace('/Commands/', '.')
 					.replace('/Ext/', '.')
 					.replace('/', '.')
 					.replace('.bsl', '');
-				
-				// патч по словарю
 				for (var keyDict in replaceDict) {
 					newText = newText.replace(keyDict, replaceDict[keyDict]);
 				}
